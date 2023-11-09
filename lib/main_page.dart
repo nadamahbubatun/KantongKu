@@ -13,6 +13,9 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CalendarAppBar(
+        accent: Colors.blueAccent,
+        backButton: false,
+        locale: 'id',
           onDateChanged: (value) => print(value),
           firstDate: DateTime.now().subtract(Duration(days: 140)),
           lastDate: DateTime.now()
