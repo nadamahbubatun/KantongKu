@@ -1,3 +1,5 @@
 # aplikasikeuangan
 
-A new Flutter project.
+## KantongKu
+
+. Tugas Flutter
