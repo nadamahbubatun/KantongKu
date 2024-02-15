@@ -11,7 +11,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  final List<Widget> _children = [HompePage(), categoryPage()];
+  final List<Widget> _children = [HompePage(), category_page()];
   int currentIndex = 0;
 
   void onTapTapped(int index) {
@@ -23,17 +23,30 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CalendarAppBar(
-          accent: Colors.blueAccent,
-          backButton: false,
-          locale: 'id',
-          onDateChanged: (value) => print(value),
-          firstDate: DateTime.now().subtract(Duration(days: 140)),
-          lastDate: DateTime.now()),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Colors.blue,
-        child: Icon(Icons.add),
+      appBar: (currentIndex == 0)
+          ? CalendarAppBar(
+              accent: Colors.blueAccent,
+              backButton: false,
+              locale: 'id',
+              onDateChanged: (value) => print(value),
+              firstDate: DateTime.now().subtract(Duration(days: 140)),
+              lastDate: DateTime.now(),
+            )
+          : PreferredSize(
+              child: Container(
+                  child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 36, horizontal: 16),
+                child: Text('categories'),
+              )),
+              preferredSize: Size.fromHeight(100)),
+      floatingActionButton: Visibility(
+        visible: (currentIndex == 0) ? true : false,
+        child: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: Colors.blue,
+          child: Icon(Icons.add),
+        ),
       ),
       body: _children[currentIndex],
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -48,7 +61,11 @@ class _MainPageState extends State<MainPage> {
         SizedBox(
           width: 20,
         ),
-        IconButton(onPressed: () {}, icon: Icon(Icons.list))
+        IconButton(
+            onPressed: () {
+ onTapTapped(1);
+            },
+            icon: Icon(Icons.list))
       ])),
     );
   }
