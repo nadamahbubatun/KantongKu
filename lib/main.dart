@@ -1,4 +1,4 @@
-import 'package:aplikasikeuangan/main_page.dart';
+import 'package:aplikasikeuangan/pages/main_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: MainPage(),
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
     );
   }
 }

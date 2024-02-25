@@ -1,5 +1,6 @@
-import 'package:aplikasikeuangan/category_page.dart';
-import 'package:aplikasikeuangan/home_page.dart';
+import 'package:aplikasikeuangan/pages/category_page.dart';
+import 'package:aplikasikeuangan/pages/home_page.dart';
+import 'package:aplikasikeuangan/pages/transaction_page.dart';
 import 'package:flutter/material.dart';
 import 'package:calendar_appbar/calendar_appbar.dart';
 
@@ -43,7 +44,14 @@ class _MainPageState extends State<MainPage> {
       floatingActionButton: Visibility(
         visible: (currentIndex == 0) ? true : false,
         child: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context)
+                .push(
+                    MaterialPageRoute(builder: (context) => TranscationPage()))
+                .then((value) {
+              setState(() {});
+            });
+          },
           backgroundColor: Colors.blue,
           child: Icon(Icons.add),
         ),
@@ -63,7 +71,7 @@ class _MainPageState extends State<MainPage> {
         ),
         IconButton(
             onPressed: () {
- onTapTapped(1);
+              onTapTapped(1);
             },
             icon: Icon(Icons.list))
       ])),
