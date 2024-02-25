@@ -25,7 +25,7 @@ class _HompePageState extends State<HompePage> {
                   Row(
                     children: [
                       Container(
-                        child: Icon(Icons.download, color: Colors.blue),
+                        child: Icon(Icons.download, color: Colors.green),
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8)),

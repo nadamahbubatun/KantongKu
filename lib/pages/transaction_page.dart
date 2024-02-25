@@ -31,7 +31,7 @@ class _TranscationPageState extends State<TranscationPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
               child: Row(
                 children: [
                   Switch(
@@ -41,8 +41,8 @@ class _TranscationPageState extends State<TranscationPage> {
                         isExpense = value;
                       });
                     },
-                    inactiveTrackColor: Colors.blue[200],
-                    inactiveThumbColor: Colors.blue,
+                    inactiveTrackColor: Colors.green[200],
+                    inactiveThumbColor: Colors.green,
                     activeColor: Colors.red,
                   ),
                   Text(

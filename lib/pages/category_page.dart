@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:calendar_appbar/calendar_appbar.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class category_page extends StatefulWidget {
   const category_page({super.key});
@@ -21,7 +21,10 @@ class _category_pageState extends State<category_page> {
                 child: Column(
                   children: [
                     Text(
-                      'add income',
+                      ((isExpense!) ? "Outcome" : "Income"),
+                      style: GoogleFonts.montserrat(
+                          fontSize: 18,
+                          color: (isExpense!) ? Colors.red : Colors.green),
                     ),
                     SizedBox(
                       height: 10,
@@ -59,8 +62,8 @@ class _category_pageState extends State<category_page> {
                     isExpense = value;
                   });
                 },
-                inactiveTrackColor: Colors.blue[200],
-                inactiveThumbColor: Colors.blue,
+                inactiveTrackColor: Colors.green[200],
+                inactiveThumbColor: Colors.green,
                 activeColor: Colors.red,
               ),
               IconButton(
