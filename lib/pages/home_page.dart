@@ -25,7 +25,7 @@ class _HompePageState extends State<HompePage> {
                   Row(
                     children: [
                       Container(
-                        child: Icon(Icons.download, color: Colors.blue),
+                        child: Icon(Icons.download, color: Colors.green),
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8)),
@@ -132,7 +132,7 @@ class _HompePageState extends State<HompePage> {
                 title: Text("Rp.20.000.000"),
                 subtitle: Text("gaji bulanan"),
                 leading: Container(
-                  child: Icon(Icons.upload, color: Colors.green),
+                  child: Icon(Icons.download, color: Colors.green),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(8)),
