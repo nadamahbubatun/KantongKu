@@ -13,6 +13,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^6.1.0
   calendar_appbar: ^0.0.6
+  supabase_flutter: ^2.0.0
 
 dev_dependencies:
 flutter_test:
@@ -21,3 +22,6 @@ flutter_test:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - .env
